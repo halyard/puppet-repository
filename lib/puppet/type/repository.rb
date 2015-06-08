@@ -1,6 +1,6 @@
 require 'pathname'
 
-Puppet.newtype :repository do
+Puppet::Type.newtype :repository do
 
   ensurable do
     newvalue :present do
