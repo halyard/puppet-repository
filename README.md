@@ -1,54 +1,31 @@
-# Repository Type and Provider for Boxen
+puppet-repository
+===========
 
-Requires the following boxen modules:
+[![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://tldrlegal.com/license/mit-license)
+[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-repository.svg)](https://circleci.com/gh/halyard/puppet-repository)
 
-Supports:
+Module to set hostname for OSX
 
-* git
+## Changes from upstream
+
+* Clean up syntax for newtype creation
 
 ## Usage
 
 ```puppet
-repository {
-  '/path/to/code':
+repository { '/path/to/code':
     source   => 'user/repo', #short hand for github repos
-    provider => 'git';
-  'my emacs config':
+    provider => 'git'
+}
+repository { 'my emacs config':
     source   => 'git://github.com/wfarr/.emacs.d.git',
+    ensure   => '32811db53e109197244c21a84b0fa2b36f497966',
     path     => '/etc/emacs.d',
     provider => 'git',
 }
 ```
 
-### Ensure your repo is at a specific revision
+## Required Puppet Modules
 
-You can ensure that your repository is always at a specific revision by
-including a `ensure` argument. `ensure` takes a git version.
+* [git](https://github.com/halyard/puppet-git)
 
-#### In sync with remote HEAD
-```puppet
-repository {
-  '/path/to/code':
-    ensure   => 'origin/HEAD'
-    source   => 'user/repo',
-    provider => 'git';
-  'my emacs config':
-    source   => 'git://github.com/wfarr/.emacs.d.git',
-    path     => '/etc/emacs.d',
-    provider => 'git',
-}
-```
-
-#### Specific version
-```puppet
-repository {
-  '/path/to/code':
-    ensure   => '32811db53e109197244c21a84b0fa2b36f497966'
-    source   => 'user/repo',
-    provider => 'git';
-  'my emacs config':
-    source   => 'git://github.com/wfarr/.emacs.d.git',
-    path     => '/etc/emacs.d',
-    provider => 'git',
-}
-```
