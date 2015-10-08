@@ -1,0 +1,22 @@
+{
+  "name": "halyard-repository",
+  "version": "2.8.6",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Configure git repositories",
+  "source": "https://github.com/halyard/puppet-repository",
+  "project_page": "https://github.com/halyard/puppet-repository",
+  "issues_url": "https://github.com/halyard/puppet-repository/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemmajrelease": [
+        "14",
+        "15"
+      ]
+    }
+  ]
+}
