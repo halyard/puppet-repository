@@ -1,6 +1,6 @@
 {
   "name": "halyard-repository",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure git repositories",
