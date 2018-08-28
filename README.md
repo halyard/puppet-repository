@@ -3,7 +3,7 @@ puppet-repository
 
 [![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/repository.svg)](https://forge.puppetlabs.com/halyard/repository)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://tldrlegal.com/license/mit-license)
-[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-repository/master.svg)](https://circleci.com/gh/halyard/puppet-repository)
+[![Build Status](https://img.shields.io/travis/com/halyard/puppet-repository.svg)](https://travis-ci.com/halyard/puppet-repository)
 
 Module to define repository type
 
